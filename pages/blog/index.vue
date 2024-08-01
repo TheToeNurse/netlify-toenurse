@@ -6,8 +6,8 @@ const { data: blog } = await useAsyncData("blog", () => queryContent("/blog").fi
 </script>
 
 <template>
-  <div class="w-full bg-white dark:bg-gray-900">
-    <div class="w-full py-40 bg-white dark:bg-black px-4">
+  <div class="w-full bg-white dark:bg-gray-900 pb-24">
+    <div class="w-full pb-40 pt-20 bg-white dark:bg-black px-4">
       <h1 class="text-6xl font-bold text-center text-gray-700 dark:text-white">My Blog</h1>
     </div>
     <div class="max-w-7xl bg-white rounded-3xl shadow-md -mt-20 mx-auto p-10 grid grid-cols-3 gap-10">
