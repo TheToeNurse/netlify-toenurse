@@ -25,10 +25,10 @@ export function useServices() {
             "short_description": "Say goodbye to rough patches and hello to smooth, happy feet with our callus and corn reduction service—treat your feet to some pampering!",
         },
         {
-            "slug": "ingrown-nail-relief",
+            "slug": "ingrown-nail-care",
             "image": "foot-care-3557103_1280.jpg",
-            "image_alt": "ingrown nail relief",
-            "title": "Ingrown Nail Relief",
+            "image_alt": "ingrown nail care",
+            "title": "Ingrown Nail Managment and Care",
             "short_description": "Kick ingrown nails to the curb with our relief service from a certified foot care specialist—because pain-free toes are happy toes!",
         },
         {
@@ -39,10 +39,10 @@ export function useServices() {
             "short_description": "Treat your feet to a blissful escape with our foot massage service from a certified foot care specialist—because your feet deserve a little relaxation too!",
         },
         {
-            "slug": "foot-assessments",
+            "slug": "foot-assessment",
             "image": "foot-care-6762750_1280.jpg",
-            "image_alt": "Foot Assessments",
-            "title": "Foot Assessments",
+            "image_alt": "Foot Assessment",
+            "title": "Foot Assessment",
             "short_description": "Step into comfort with our foot assessment service from a certified foot care specialist—because happy feet start with the right foundation!",
         }
     ])
