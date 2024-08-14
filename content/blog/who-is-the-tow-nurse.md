@@ -1,36 +1,41 @@
 ---
-title: "Who is The Toe Nurse"
+title: "Who is The Toe Nurse v2"
 image: "routine-foot-care.jpg"
 description: "Great question? please take a moment to find out click here"
 ---
 
-Hi there! I'm Trisha Vilen RN, BSN, PHN, CRRN, CFCS, After spending the first half of my life in the automotive industry where I considered myself as a nurse for cars, which included years in parts, paint, a nationally certified tow truck driver, and a licensed locksmith, I took the leap to nursing following a personal battle with cancer and a need to be better informed about my health and wellbeing. This is when I became a nurse for real and now have over 10 years experience and many letters behind my name. My journey has not been easy but has been about education, service and growth, and now I'm excited to introduce you to my new venture, **The Toe Nurse** serving the community one foot at a time.
+## Meet Trisha Vilen, RN, BSN, PHN, CRRN, CFCS: The Toe Nurse
 
-## Why "The Toe Nurse"?
+Hello! I’m Trisha Vilen, the heart and soul behind **The Toe Nurse**. My journey has been anything but conventional, and that’s what makes my approach to foot care uniquely effective. With over a decade of nursing experience and a rich background in the automotive industry, I’m thrilled to merge my passions and expertise in a way that serves you best.
 
-**The Toe Nurse** isn't just a catchy name; from towing to toes it's all about spelling and I have done both. I am commitment to bringing essential foot care to those who need it most: the hardworking folks who often neglect their feet and or hands. My experience with veterans and the automotive Industry has shown me the importance of proactive maintenance, especially among populations that may hesitate to seek medical attention or ask for directions.
+### From Tow Trucks to Toe Care
 
-## Services Offered
+Before diving into nursing, I spent years in the automotive world, where I proudly served as a nationally certified tow truck driver, locksmith, and parts and paint specialist. Just as I once took care of vehicles, I now dedicate myself to caring for feet. My personal battle with cancer ignited a deep desire to help others and take charge of my own health. This led me to nursing, and today, I bring that same dedication and attention to detail to **The Toe Nurse**.
 
-As **The Toe Nurse**, I aim to revolutionize foot care for the blue-collar community. From routine foot maintenance to specialized care, my services include:
+### Why “The Toe Nurse”?
 
-- **Routine Foot Care**: Nail trimming, callus management(both hands and feet), and skin moisturizing.
-- **Foot Health Education**: Teaching the importance of foot care and early detection.
-- **Mobile Foot Mechanic**: Bringing foot care services directly to your doorstep and reducing the need to be able to reach and see your all toes.
-- **Rounding Registered Nurse**: Providing holistic health checks to ensure overall well-being and providing referrals when issues arise.
+The name **The Toe Nurse** isn’t just a fun play on words—it's a symbol of my commitment to comprehensive care. From “towing” to “toes,” my mission is to provide essential foot care to those who often put others first. I’ve worked closely with veterans and blue-collar workers, witnessing firsthand the importance of proactive foot maintenance.
 
-## Why Foot Care Matters
+### Our Services
 
-Just like cars need regular maintenance to run and drive smoothly, our feet require attention to prevent discomfort and even more serious issues. By staying ahead of foot problems, you can avoid unnecessary pain and maintain your mobility—essential for every aspect of daily life.
+At **The Toe Nurse**, we’re revolutionizing foot care for hardworking individuals like you. Here’s what we offer:
 
-## Join Me on this Journey
+- **Routine Foot Care**: Professional nail trimming, callus management (for both hands and feet), and skin moisturizing to keep your feet feeling and looking great.
 
-My ultimate goal is to expand **The Toe Nurse** into a comprehensive mobile foot care service, reaching even more individuals who may not prioritize their foot, forget until they hurt or just cant reach their feet. Together, we can promote a positive approach to health and well-being within our community one visit at a time.
+- **Foot Health Education**: Learn the vital importance of foot care and how to spot potential issues before they become serious.
 
-## Conclusion
+- **Mobile Foot Mechanic**: We come to you! Our mobile service brings foot care directly to your doorstep, so you don’t have to worry about accessibility or travel.
 
-**The Toe Nurse** isn't just about treating feet; it's about empowering individuals to take charge of their health. Whether you're a veteran, a blue-collar worker, or anyone in between and or outside that box, I'm here to support you on your journey to healthier feet and a happier life.
+- **Holistic Health Checks**: Beyond foot care, we offer comprehensive health assessments and referrals to ensure your overall well-being.
 
-Remember, your feet are your #1 means of transportation, From Towing to Toes, Maintenance Matters! Let's change the stereotype and take the first step towards healthier feet together.
+### Why Foot Care Matters
 
+Just as vehicles need regular maintenance to perform optimally, your feet need consistent care to keep you moving comfortably and pain-free. By addressing foot issues early, you can avoid more serious problems and maintain your mobility—essential for every aspect of your daily life.
 
+### Join Us on the Journey
+
+My goal for **The Toe Nurse** is to expand our reach and offer top-notch foot care to even more individuals who might overlook their foot health. Whether you’re a veteran, a dedicated worker, or simply someone who deserves exceptional care, I’m here to support you every step of the way.
+
+### Conclusion
+
+**The Toe Nurse** is more than just foot care—it’s about empowering you to take charge of your health. From **_towing_** to **_toes_**, maintenance matters! Let’s redefine foot care and embrace a proactive approach to well-being. Your feet are your primary means of transportation; let’s make sure they’re always in top shape. Together, we can step confidently towards a healthier, happier life.

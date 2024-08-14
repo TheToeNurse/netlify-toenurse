@@ -44,7 +44,7 @@ export function useSiteData() {
     const metaData = ref<MetaData>({
         title: "The Toe Nurse",
         legalName: "The Toe Nurse LLC",
-        tagLine: "Step into your best self.",
+        tagLine: "From towing to toes, maintenance matters!",
     });
     const address = ref<Address> ({
         address1: "",
