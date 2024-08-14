@@ -1,5 +1,5 @@
 ---
-title: "Who is The Toe Nurse v2"
+title: "Who is The Toe Nurse"
 image: "routine-foot-care.jpg"
 description: "Great question? please take a moment to find out click here"
 ---
