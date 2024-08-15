@@ -12,7 +12,7 @@ Corns and calluses are thickened areas of skin that develop in response to frict
 
 ### Our Corns and Calluses Care Services Include:
 
-- **Assessment and Diagnosis**: Thorough evaluation of your feet to identify the severity and type of corns or calluses.
+- **Assessment**: Thorough evaluation of your feet to identify the severity and type of corns or calluses.
 - **Professional Removal**: Safe and effective removal of corns and calluses using specialized tools and techniques.
 - **Professional Removal**: including but not limited to calluses on hands and feet.
 - **Skin Care and Treatment**: Application of moisturizers and treatments to soothe and protect the skin after removal.

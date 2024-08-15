@@ -1,6 +1,6 @@
 ---
 title: "Ingrown Toenail Management and Care"
-image: "1200x1200.jpg"
+image: "foot-care-6762750_1280.jpg"
 description: "When it comes to men's foot care and ego, there may be a perception that taking care of one's feet or seeking help for foot problems is a sign of weakness..."
 ---
 
@@ -12,7 +12,7 @@ An ingrown toenail occurs when the edge of the toenail grows into the surroundin
 
 ## Our Ingrown Toenail Care Services Include
 
-- **Assessment and Diagnosis**: Comprehensive evaluation to determine the severity and appropriate treatment plan.
+- **Assessment**: Comprehensive evaluation to determine the severity and appropriate treatment plan.
 - **Professional Nail Trimming**: Correct trimming techniques to alleviate discomfort and prevent recurrence.
 - **Ingrown Toenail Treatment**: Removal of the ingrown portion of the nail and management of any infection if present.
 - **Foot Care Advice**: Guidance on proper nail care, footwear choices, and preventative measures to avoid future issues.
