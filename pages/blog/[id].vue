@@ -17,7 +17,7 @@ const { data: article } = await useAsyncData("article", () =>
           :alt="`image for ${article.title} article`"
       />
       <div class="flex items-center justify-center gap-4 mt-7.5">
-        <div class="flex w-10 h-10 rounded-full overflow-hidden">
+        <div class="flex w-16 h-16 rounded-full overflow-hidden">
           <NuxtImg
             :src="`/blog-images/author.jpg`"
             alt="author"
