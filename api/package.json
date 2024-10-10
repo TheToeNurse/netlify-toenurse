@@ -1,0 +1,22 @@
+{
+  "name": "api",
+  "version": "0.0.1",
+  "description": "The Toe Nurse API",
+  "main": "handler.js",
+  "scripts": {
+    "deploy:development": "sls deploy --stage development",
+    "deploy:production": "sls deploy --stage production",
+    "sesTemplate:deploy:development": "sls ses-template deploy --stage development",
+    "sesTemplate:deploy:production": "sls ses-template deploy --stage production"
+  },
+  "author": "Andrew Alba <aalba@albawebstudio.com> (https://albaweb.studio)",
+  "license": "UNLICENSED",
+  "private": true,
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.668.0",
+    "serverless": "^4.4.5"
+  },
+  "devDependencies": {
+    "@haftahave/serverless-ses-template": "^6.1.0"
+  }
+}
