@@ -1,0 +1,14 @@
+{
+  "name": "emails",
+  "version": "0.0.1",
+  "description": "Email templates for The Toe Nurse Project",
+  "scripts": {
+    "build": "mjml ./src/*.mjml -o ./dist/",
+    "watch": "mjml -w ./src/*.mjml -o ./dist/"
+  },
+  "author": "Andrew Alba <aalba@albawebstudio.com> (https://albaweb.studio)",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "mjml": "^4.15.3"
+  }
+}
