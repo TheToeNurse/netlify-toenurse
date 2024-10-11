@@ -28,6 +28,12 @@ export default defineNuxtConfig({
     "@nuxtjs/color-mode",
   ],
 
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL,
+    }
+  },
+
   image: {
     provider: 'netlify',
   },
