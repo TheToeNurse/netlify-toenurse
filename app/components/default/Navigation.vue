@@ -2,14 +2,16 @@
 import { ref, onMounted } from 'vue'
 import { useColorMode } from '@vueuse/core'
 import { useSiteData } from "~/composables/useSiteData"
+import logoDark from '/public/logo-navigation-dark.svg'
+import logoLight from '/public/logo-navigation-light.svg'
 
 const { metaData } = useSiteData()
 
 const colorMode = useColorMode()
-const logoSrc = ref('/logo-navigation-light.svg')
+const logoSrc = ref(logoLight)
 
 onMounted(() => {
-  logoSrc.value = colorMode.value === 'dark' ? '/logo-navigation-dark.svg' : '/logo-navigation-light.svg'
+  logoSrc.value = colorMode.value === 'dark' ? logoDark : logoLight
 })
 const showMenu = ref(false);
 const toggleNav = () => (showMenu.value = !showMenu.value);
