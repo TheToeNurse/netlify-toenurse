@@ -12,9 +12,11 @@
   status = 200
 
 [[plugins]]
-package = "@netlify/plugin-emails"
-[[plugins]]
-package = "@netlify/plugin-csp-nonce"
+  package = "@netlify/plugin-csp-nonce"
+  [plugins.inputs]
+    reportOnly = false
+    excludedPath = []
+
 
 [[headers]]
   for = "/*"
