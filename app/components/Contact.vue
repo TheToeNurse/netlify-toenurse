@@ -6,6 +6,7 @@ const { address, phone, metaData } = useSiteData()
 
 const config = useRuntimeConfig()
 const apiUrl = config.public.apiUrl
+console.log(`apiUrl: `, apiUrl);
 
 interface formData {
   name: string,
