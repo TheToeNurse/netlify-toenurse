@@ -26,6 +26,7 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "nuxt-swiper",
     "@nuxtjs/color-mode",
+    "nuxt-svgo",
   ],
 
   runtimeConfig: {
