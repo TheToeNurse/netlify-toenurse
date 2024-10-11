@@ -14,7 +14,7 @@ provider:
   stage: ${opt:stage, 'development'}
   runtime: nodejs18.x
   iam:
-    # role: arn:aws:iam::*:role/the-toe-nurse-api
+    role: arn:aws:iam::412381734576:role/the-toe-nurse-api
 
 functions:
   contactForm:
@@ -28,9 +28,9 @@ functions:
 
 custom:
   profiles:
-    development: default
-    staging: default
-    production: default
+    development: toenurse
+    staging: toenurse
+    production: toenurse
   sesTemplates:
     addStage: true                             # Specifies whether to add stage to template name (default false)
     configFile: './email-templates.js' # Config file path (default './ses-email-templates/index.js')

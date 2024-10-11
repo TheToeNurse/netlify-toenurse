@@ -6,6 +6,7 @@ const { address, phone, metaData } = useSiteData()
 
 const config = useRuntimeConfig()
 const apiUrl = config.public.apiUrl
+
 interface formData {
   name: string,
   subject: string,
@@ -15,7 +16,7 @@ interface formData {
 
 const showSpinner = ref(false);
 const showSuccess = ref(false);
-const showForm = computed(() => !showSuccess.value);
+const showForm = computed(() => !showSuccess.value && !showSpinner.value);
 
 const getInitialFormData = () => ({
   name: "",
@@ -43,12 +44,12 @@ const submitForm = async () => {
       //Do something when request fails
       return
     }
-    /* resetForm()
+    resetForm()
     showSpinner.value = false
-    showSuccess.value = true */
+    showSuccess.value = true
   } catch (e) {
-    /* console.log(e);
-    showSpinner.value = false */
+    console.log(e);
+    showSpinner.value = false
   }
 }
 const clearSuccess = () => {
@@ -65,7 +66,8 @@ const clearSuccess = () => {
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white">Contact Us</h2>
           <p class="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
           <template v-if="showSpinner">
-            <div class="space-y-8 h-96 flex items-center justify-center">
+            <div :class="showSpinner ? 'opacity-100 transition duration-1000 ease-in-out' : 'opacity-0 transition-all duration-1000 ease-in-out'"
+                 class="space-y-8 h-96 flex items-center justify-center">
               <svg role="status" class="inline h-8 w-8 animate-spin mr-2 text-gray-200 dark:text-gray-600 fill-primary-600"
                    viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -99,7 +101,8 @@ const clearSuccess = () => {
             </form>
           </template>
           <template v-if="showSuccess">
-            <div class="flex min-h-screen items-center justify-center">
+            <div :class="showSuccess ? 'opacity-100 transition duration-1000 ease-in-out' : 'opacity-0 transition-all duration-1000 ease-in-out'"
+                 class="flex items-center justify-center">
               <div class="rounded-lg bg-gray-800 px-16 py-14">
                 <div class="flex justify-center">
                   <div class="rounded-full bg-green-200 p-6">
