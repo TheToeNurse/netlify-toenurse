@@ -2,14 +2,16 @@
 import { ref, onMounted } from 'vue'
 import { useColorMode } from '@vueuse/core'
 import { useSiteData } from "~/composables/useSiteData"
+import logoDark from '/public/logo-full-dark.svg'
+import logoLight from '/public/logo-full-light.svg'
 
 const { metaData } = useSiteData()
 
 const colorMode = useColorMode()
-const logoSrc = ref('/logo-full-light.svg')
+const logoSrc = ref(logoLight)
 
 onMounted(() => {
-  logoSrc.value = colorMode.value === 'dark' ? '/logo-full-dark.svg' : '/logo-full-light.svg'
+  logoSrc.value = colorMode.value === 'dark' ? logoDark : logoLight
 })
 </script>
 
