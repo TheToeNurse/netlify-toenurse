@@ -10,15 +10,3 @@
   from = "/*"
   to = "/index.html"
   status = 200
-
-#[[plugins]]
-#  package = "@netlify/plugin-csp-nonce"
-#  [plugins.inputs]
-#    reportOnly = false
-#    excludedPath = []
-
-
-[[headers]]
-  for = "/*"
-  [headers.values]
-    Content-Security-Policy = "default-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src * data:; script-src 'self' 'unsafe-inline'; font-src 'self' data:; connect-src 'self' data: ws://localhost:*/ws https://*.execute-api.us-east-1.amazonaws.com/;"

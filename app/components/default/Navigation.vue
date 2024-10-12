@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
+import { ref } from 'vue'
 import { useColorMode } from '@vueuse/core'
 import { useSiteData } from "~/composables/useSiteData"
 import LogoDark from '/public/logo-navigation-dark.svg'
@@ -17,7 +17,6 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
     <nav>
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <NuxtLink to="https://thetoenurse.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-<!--          <NuxtImg :src="logoSrc" class="h-8" alt="The Toe Nurse logo" />-->
           <LogoDark v-if="colorMode.value === 'dark'" :fontControlled="false" class="h-8" alt="The Toe Nurse logo"/>
           <LogoLight v-else class="h-8" :fontControlled="false" alt="The Toe Nurse logo"/>
           <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white font-squada-one">{{ metaData.title }}</span>
