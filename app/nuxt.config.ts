@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "nuxt-swiper",
     "@nuxtjs/color-mode",
     "nuxt-svgo",
+    "nuxt-security",
   ],
 
   runtimeConfig: {
