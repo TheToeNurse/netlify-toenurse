@@ -26,7 +26,15 @@ export default defineNuxtConfig({
     "@nuxt/content",
     "nuxt-swiper",
     "@nuxtjs/color-mode",
+    "nuxt-svgo",
+    "nuxt-security",
   ],
+
+  runtimeConfig: {
+    public: {
+      apiUrl: process.env.API_URL,
+    }
+  },
 
   image: {
     provider: 'netlify',

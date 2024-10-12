@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue'
 import { useColorMode } from '@vueuse/core'
 import { useSiteData } from "~/composables/useSiteData"
+import LogoDark from '/public/logo-full-dark.svg'
+import LogoLight from '/public/logo-full-light.svg'
 
 const { metaData } = useSiteData()
 
 const colorMode = useColorMode()
-const logoSrc = ref('/logo-full-light.svg')
-
-onMounted(() => {
-  logoSrc.value = colorMode.value === 'dark' ? '/logo-full-dark.svg' : '/logo-full-light.svg'
-})
 </script>
 
 <template>
@@ -37,7 +33,8 @@ onMounted(() => {
         </NuxtLink>
       </div>
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <NuxtImg :src="logoSrc" />
+        <LogoDark v-if="colorMode.value === 'dark'" :fontControlled="false" alt="The Toe Nurse logo"/>
+        <LogoLight v-else :fontControlled="false" alt="The Toe Nurse logo"/>
       </div>
     </div>
   </section>
