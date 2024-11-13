@@ -98,10 +98,10 @@ const date = ref(new Date().getFullYear())
               >
                 <ul class="list-unstyled">
                   <li>
-                    <NuxtLink to="/terms" class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">Terms &amp; Conditions</NuxtLink>
+                    <NuxtLink to="/legal/terms" class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">Terms &amp; Conditions</NuxtLink>
                   </li>
                   <li>
-                    <NuxtLink to="/privacy" class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">Privacy Policy</NuxtLink>
+                    <NuxtLink to="/legal/privacy" class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm">Privacy Policy</NuxtLink>
                   </li>
                 </ul>
               </div>
