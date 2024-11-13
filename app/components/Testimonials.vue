@@ -44,7 +44,7 @@ const modules = [Pagination, Navigation, EffectFade];
           :autoHeight="true"
           class="w-full md:w-4/5 lg:w-2/3"
       >
-        <SwiperSlide v-for="testimonial in testimonials" :key="testimonial.id">
+        <SwiperSlide v-for="(testimonial, idx) in testimonials" :key="idx">
           <Testimonial :testimonial="testimonial" />
         </SwiperSlide>
       </Swiper>

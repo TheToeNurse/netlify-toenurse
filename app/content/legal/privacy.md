@@ -82,7 +82,7 @@ steps to ensure the privacy of any minors accessing our Website. If it is determ
 been inadvertently collected, we will take the steps necessary to ensure that such information is deleted from
 our database or that verifiable parental consent is obtained. Our Website established guidelines that operate in
 connection with our adherence to the Federal Children’s Online Privacy Protection Act of 1998 (COPPA): 
-[http://www.ftc.gov/ogc/coppa1.htm">http://www.ftc.gov/ogc/coppa1.htm](http://www.ftc.gov/ogc/coppa1.htm">http://www.ftc.gov/ogc/coppa1.htm). 
+[http://www.ftc.gov/ogc/coppa1.htm](http://www.ftc.gov/ogc/coppa1.htm). 
 We strongly agree with the intent of COPPA and have structured our COPPA policy to enable us to collect only the 
 information from children that is necessary for their access to our Website service; and, then only after obtaining 
 verifiable consent from their parents.
