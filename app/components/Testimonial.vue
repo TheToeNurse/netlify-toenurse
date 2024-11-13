@@ -1,20 +1,17 @@
 <script setup lang="ts">
 import { defineProps } from 'vue'
+import defaultProfileImg from '@/public/user-solid.svg'
 
 const props = defineProps<{
   testimonial: object
 }>()
-
-const ratingToInt = () => {
-  return parseInt(props.testimonial.rating, 10)
-};
 </script>
 
 <template>
   <div class="group bg-white border border-solid border-gray-300 rounded-xl px-16 w-full hover:shadow-sm">
     <div class="">
       <div class="flex items-center my-6 text-amber-500">
-        <div v-for="count in ratingToInt()">
+        <div v-for="count in testimonial.rating">
           <svg class="w-5 h-5" viewBox="0 0 18 17" fill="none"
                xmlns="http://www.w3.org/2000/svg">
             <path
@@ -29,9 +26,11 @@ const ratingToInt = () => {
       </p>
     </div>
     <div class="flex items-center gap-5 border-t border-solid border-gray-200 py-5 mb-6">
-      <NuxtImg :src="'/testimonial-images/' + testimonial.image"
+      <NuxtImg v-if="testimonial.image"
+               :src="'/testimonial-images/' + testimonial.image"
                :alt="testimonial.author"
                class="rounded-full h-10 w-10" />
+      <defaultProfileImg v-else :fontControlled="false" class="rounded-full h-10 w-10" alt="testimonial.author"/>
       <div class="block">
         <h5 class="text-gray-900 font-medium mb-1">{{ testimonial.author }}</h5>
         <span class="text-sm leading-4 text-gray-500">{{ testimonial.location }}</span>
