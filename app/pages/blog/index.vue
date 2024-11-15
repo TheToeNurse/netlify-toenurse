@@ -10,7 +10,7 @@ const { data: blog } = await useAsyncData("blog", () => queryContent("/blog").fi
     <div class="w-full pb-40 pt-20 bg-white dark:bg-black px-4">
       <h1 class="text-6xl font-bold text-center text-gray-700 dark:text-white">My Blog</h1>
     </div>
-    <div class="max-w-7xl bg-white rounded-3xl shadow-md -mt-20 mx-auto p-10 grid grid-cols-3 gap-10">
+    <div class="max-w-7xl bg-white rounded-3xl shadow-md -mt-20 mx-auto p-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
       <div v-for="item in blog" class="max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
         <a href="#">
           <img class="rounded-t-lg aspect-square" :src="`/blog-images/${item.image}`" alt="" />
