@@ -38,16 +38,17 @@ module.exports.contactForm = (event, context, callback) => {
 
 const sendContactFormToTheToeNurse = (data) => {
     // massage data
+    const options = {
+        Destination: {
+            ToAddresses: process.env.TO_EMAIL.split(","),
+        },
+        Source: process.env.SOURCE_EMAIL,
+        Template: `the-toe-nurse-contact_${process.env.STAGE}`,
+        TemplateData: JSON.stringify(data),
+        ReplyToAddresses: [process.env.REPLY_TO_EMAIL],
+    }
     sesClient
-        .sendTemplatedEmail({
-            Destination: {
-                ToAddresses: process.env.TO_EMAIL.split(","),
-            },
-            Source: process.env.SOURCE_EMAIL,
-            Template: `the-toe-nurse-contact_${process.env.STAGE}`,
-            TemplateData: JSON.stringify(data),
-            ReplyToAddresses: [process.env.REPLY_TO_EMAIL],
-        })
+        .sendTemplatedEmail(options)
         .then(function () {
             console.log("sendContactFormToTheToeNurse email queued")
         })
