@@ -1,8 +1,12 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-
 const props = defineProps<{
-  service: object
+  service: {
+    slug: string,
+    image: string,
+    img_alt: string,
+    title: string,
+    short_description: string,
+  }
 }>()
 </script>
 

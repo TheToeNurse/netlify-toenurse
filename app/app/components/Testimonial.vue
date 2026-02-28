@@ -1,6 +1,5 @@
 <script setup lang="ts">
-import { defineProps } from 'vue'
-import defaultProfileImg from '@/public/user-solid.svg'
+import defaultProfileImgUrl from '/user-solid.svg'
 
 const props = defineProps<{
   testimonial: object
@@ -29,8 +28,14 @@ const props = defineProps<{
       <NuxtImg v-if="testimonial.image"
                :src="'/testimonial-images/' + testimonial.image"
                :alt="testimonial.author"
-               class="rounded-full h-10 w-10" />
-      <defaultProfileImg v-else :fontControlled="false" class="rounded-full h-10 w-10" alt="testimonial.author"/>
+               class="rounded-full h-10 w-10"
+      />
+      <img
+        v-else
+        :src="defaultProfileImgUrl"
+        :alt="testimonial.author"
+        class="rounded-full h-10 w-10"
+      />
       <div class="block">
         <h5 class="text-gray-900 font-medium mb-1">{{ testimonial.author }}</h5>
         <span class="text-sm leading-4 text-gray-500">{{ testimonial.location }}</span>

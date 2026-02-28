@@ -114,7 +114,7 @@ const date = ref(new Date().getFullYear())
         >
           <div class="w-full md:w-4/12 px-4 mx-auto text-center">
             <div class="text-sm text-gray-600 font-semibold py-1">
-              Copyright © {{date}} The Toe Nurse.
+              Copyright © 2025-{{date}} The Toe Nurse.
             </div>
           </div>
         </div>
