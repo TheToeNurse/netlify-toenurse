@@ -1,13 +1,11 @@
 <script setup lang="ts">
 import { ref } from 'vue'
-import { useColorMode } from '@vueuse/core'
 import { useSiteData } from "~/composables/useSiteData"
 import LogoDarkUrl from '/logo-navigation-dark.svg'
 import LogoLightUrl from '/logo-navigation-light.svg'
 
 const { metaData } = useSiteData()
 
-const colorMode = useColorMode()
 const showMenu = ref(false);
 const toggleNav = () => (showMenu.value = !showMenu.value);
 </script>
@@ -17,17 +15,17 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
     <nav>
       <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
         <NuxtLink to="https://thetoenurse.com" class="flex items-center space-x-3 rtl:space-x-reverse">
-          <img
-              v-if="colorMode.value === 'dark'"
-              :src="LogoDarkUrl"
-              class="h-8"
-              alt="The Toe Nurse logo"
-          />
-          <img
-              v-else
+          <NuxtImg
               :src="LogoLightUrl"
-              class="h-8"
               alt="The Toe Nurse logo"
+              class="block dark:hidden h-20"
+              provider="cloudflare"
+          />
+          <NuxtImg
+              :src="LogoDarkUrl"
+              alt="The Toe Nurse logo"
+              class="hidden dark:block h-20"
+              provider="cloudflare"
           />
           <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white font-squada-one">{{ metaData.title }}</span>
         </NuxtLink>

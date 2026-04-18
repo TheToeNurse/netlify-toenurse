@@ -1,6 +1,3 @@
-# Local Netlify folder
-.netlify
-
 # Nuxt dev/build outputs
 .output
 .data

@@ -1,21 +1,21 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-
-  colorMode: {
-    fallback: 'dark',
-    classSuffix: "",
+  // Avoid duplicate `useAppConfig` Nitro auto-imports (nitropack vs @nuxt/nitro-server).
+  // Re-enable when fixed upstream: https://github.com/nuxt/nuxt/issues/34812
+  experimental: {
+    serverAppConfig: false,
+  },
+  future: {
+    compatibilityVersion: 4,
   },
 
   css: ["~/assets/css/tailwind.css"],
 
   modules: [
-    "@nuxtjs/google-fonts",
     "@nuxt/image",
     "@nuxt/content",
     "nuxt-swiper",
-    "@nuxtjs/color-mode",
     "nuxt-security",
     "@nuxt/ui"
   ],
@@ -43,13 +43,24 @@ export default defineNuxtConfig({
   },
 
   image: {
-    provider: 'netlify',
+    provider: 'cloudflare',
   },
 
-  googleFonts: {
-    families: {
-      "Squada One": true
-    },
-    preload: true
-  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        "remark-gfm",
+        "remark-emoji",
+        "remark-mdc",
+        "remark-rehype",
+        "rehype-raw",
+        "parse5",
+        "unist-util-visit",
+        "unified",
+        "debug",
+        "extend"
+      ]
+    }
+  }
+
 })

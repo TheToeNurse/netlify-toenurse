@@ -1,16 +1,14 @@
 <script setup lang="ts">
-import { useColorMode } from '@vueuse/core'
 import { useSiteData } from "~/composables/useSiteData"
 import logoDarkUrl from '/logo-full-dark.svg'
 import logoLightUrl from '/logo-full-light.svg'
 
 const { metaData } = useSiteData()
-const colorMode = useColorMode()
 </script>
 
 <template>
   <section id="home" class="bg-white dark:bg-black">
-    <div class="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+    <div class="grid max-w-7xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
       <div class="mr-auto place-self-center lg:col-span-7">
         <h1 class="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
           {{ metaData.tagLine }}
@@ -42,15 +40,17 @@ const colorMode = useColorMode()
       </div>
 
       <div class="hidden lg:mt-0 lg:col-span-5 lg:flex">
-        <img
-          v-if="colorMode.value === 'dark'"
-          :src="logoDarkUrl"
-          alt="The Toe Nurse logo"
+        <NuxtImg
+            :src="logoLightUrl"
+            alt="The Toe Nurse logo"
+            class="block dark:hidden"
+            provider="cloudflare"
         />
-        <img
-          v-else
-          :src="logoLightUrl"
-          alt="The Toe Nurse logo"
+        <NuxtImg
+            :src="logoDarkUrl"
+            alt="The Toe Nurse logo"
+            class="hidden dark:block"
+            provider="cloudflare"
         />
       </div>
     </div>
