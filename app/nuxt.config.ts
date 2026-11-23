@@ -1,37 +1,66 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
-
-  colorMode: {
-    fallback: 'dark',
-    classSuffix: "",
+  // Avoid duplicate `useAppConfig` Nitro auto-imports (nitropack vs @nuxt/nitro-server).
+  // Re-enable when fixed upstream: https://github.com/nuxt/nuxt/issues/34812
+  experimental: {
+    serverAppConfig: false,
+  },
+  future: {
+    compatibilityVersion: 4,
   },
 
-  css: ["~/assets/css/tailwind.css"],
+  css: [
+      "~/assets/css/main.css"
+  ],
 
   modules: [
-    "@nuxtjs/google-fonts",
     "@nuxt/image",
     "@nuxt/content",
     "nuxt-swiper",
-    "@nuxtjs/color-mode",
     "nuxt-security",
     "@nuxt/ui"
   ],
 
-  // Allow Nuxt Content client-side SQLite WASM to compile under CSP (dev only).
-  // See: Nuxt Content v3 WASM + CSP issues [[1]] [[2]]
+  // Static site only (Cloudflare Pages). Prevents @nuxt/content from treating the
+  // build as a Cloudflare Worker deploy and requiring D1 / better-sqlite3 at runtime.
+  nitro: {
+    preset: 'static',
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
+
+  content: {
+    experimental: {
+      // Node 22+ built-in SQLite (required on Node 26; avoids better-sqlite3 on CI).
+      sqliteConnector: 'native',
+    },
+  },
+
+  routeRules: {
+    '/': { prerender: true },
+    '/blog/**': { prerender: true },
+    '/service/**': { prerender: true },
+    '/legal/**': { prerender: true },
+  },
+
+  // Production CSP mirrors former Netlify headers (contact form → API Gateway).
   security: {
     headers: {
-      // In dev, Nuxt/Vite uses inline scripts for dev tooling/HMR.
-      // Disabling CSP locally avoids breaking the app mount.
       contentSecurityPolicy: process.env.NODE_ENV === 'development'
         ? false
         : {
-            // Keep your existing policy here, but add WASM support for Nuxt Content if you need it.
-            // Minimal example (adjust to your real production CSP requirements):
+            'default-src': ["'self'"],
+            'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+            'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
+            'img-src': ["'self'", 'data:', '*'],
             'script-src': ["'self'", "'wasm-unsafe-eval'"],
+            'connect-src': [
+              "'self'",
+              'https://*.execute-api.us-east-1.amazonaws.com',
+            ],
           },
     },
   },
@@ -42,14 +71,26 @@ export default defineNuxtConfig({
     }
   },
 
+  // Static SSG: optimize images at build time via IPX (no Cloudflare Images binding).
   image: {
-    provider: 'netlify',
+    provider: 'ipx',
   },
 
-  googleFonts: {
-    families: {
-      "Squada One": true
-    },
-    preload: true
-  },
+  vite: {
+    optimizeDeps: {
+      include: [
+        "remark-gfm",
+        "remark-emoji",
+        "remark-mdc",
+        "remark-rehype",
+        "rehype-raw",
+        "parse5",
+        "unist-util-visit",
+        "unified",
+        "debug",
+        "extend"
+      ]
+    }
+  }
+
 })

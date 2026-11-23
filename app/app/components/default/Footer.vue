@@ -28,7 +28,7 @@ const date = ref(new Date().getFullYear())
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap">
           <div class="w-full lg:w-6/12 px-4">
-            <h4 class="text-3xl font-semibold">Let's keep in touch!</h4>
+            <h4 class="text-3xl font-semibold text-slate-700">Let's keep in touch!</h4>
             <h5 class="text-lg mt-0 mb-2 text-gray-700">
               Find us on any of these platforms, we respond 1-2 business days.
             </h5>
@@ -112,10 +112,21 @@ const date = ref(new Date().getFullYear())
         <div
             class="flex flex-wrap items-center md:justify-between justify-center"
         >
-          <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+          <div class="w-full px-4 mx-auto text-center space-y-1">
             <div class="text-sm text-gray-600 font-semibold py-1">
-              Copyright © 2025-{{date}} The Toe Nurse.
+              Copyright © 2025-{{ date }} The Toe Nurse.
             </div>
+            <p class="text-sm text-gray-500">
+              Keeping this site on its toes — built &amp; hosted by
+              <NuxtLink
+                to="https://albaweb.studio"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-gray-700 hover:text-gray-900 font-semibold underline-offset-2 hover:underline"
+              >
+                Alba Web Studio
+              </NuxtLink>
+            </p>
           </div>
         </div>
       </div>

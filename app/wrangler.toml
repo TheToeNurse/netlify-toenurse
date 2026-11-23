@@ -1,0 +1,11 @@
+# Cloudflare Pages — static Nuxt site (pnpm generate → .output/public)
+# Docs: https://developers.cloudflare.com/pages/functions/wrangler-configuration/
+#
+# Git-connected Pages: set root directory to `app`, build command `pnpm generate`.
+# Wrangler reads `pages_build_output_dir` for output path. Set API_URL at build time.
+
+name = "the-toe-nurse-app"
+# Must not exceed the compatibility date supported by the installed Wrangler/workerd
+# (see `pnpm exec wrangler --version`). Aligns with app/nuxt.config.ts.
+compatibility_date = "2024-04-03"
+pages_build_output_dir = ".output/public"

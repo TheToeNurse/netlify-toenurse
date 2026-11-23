@@ -1,6 +1,6 @@
 ---
 title: "Foot Message"
-image: "1200x1200.jpg"
+image: "foot-care-6762750_1280.jpg"
 description: ""
 ---
 
