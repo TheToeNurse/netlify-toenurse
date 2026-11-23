@@ -13,19 +13,17 @@ const toggleNav = () => (showMenu.value = !showMenu.value);
 <template>
   <header class="bg-white border-gray-200 dark:bg-gray-900 sticky top-0 z-10 w-full shadow-md">
     <nav>
-      <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+      <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
         <NuxtLink to="https://thetoenurse.com" class="flex items-center space-x-3 rtl:space-x-reverse">
           <NuxtImg
               :src="LogoLightUrl"
               alt="The Toe Nurse logo"
               class="block dark:hidden h-20"
-              provider="cloudflare"
           />
           <NuxtImg
               :src="LogoDarkUrl"
               alt="The Toe Nurse logo"
               class="hidden dark:block h-20"
-              provider="cloudflare"
           />
           <span class="self-center text-4xl font-semibold whitespace-nowrap dark:text-white font-squada-one">{{ metaData.title }}</span>
         </NuxtLink>

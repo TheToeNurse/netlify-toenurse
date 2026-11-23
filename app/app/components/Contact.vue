@@ -118,7 +118,7 @@ const clearSuccess = () => {
             <p class="font-semibold text-lg dark:text-white">Call us:</p>
           </div>
           <p class="text-gray-500 dark:text-gray-400">Call us! We are always happy to help.</p>
-          <p class="text-primary-600 dark:te  xt-primary-500"><NuxtLink :to="'tel:' + phone.value">{{phone.formatted}}</NuxtLink></p>
+          <p class="text-primary-600 dark:text-primary-500"><NuxtLink :to="'tel:' + phone.value">{{phone.formatted}}</NuxtLink></p>
         </div>
       </div>
     </div>

@@ -44,13 +44,11 @@ const { metaData } = useSiteData()
             :src="logoLightUrl"
             alt="The Toe Nurse logo"
             class="block dark:hidden"
-            provider="cloudflare"
         />
         <NuxtImg
             :src="logoDarkUrl"
             alt="The Toe Nurse logo"
             class="hidden dark:block"
-            provider="cloudflare"
         />
       </div>
     </div>

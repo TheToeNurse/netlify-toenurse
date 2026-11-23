@@ -10,7 +10,9 @@ export default defineNuxtConfig({
     compatibilityVersion: 4,
   },
 
-  css: ["~/assets/css/tailwind.css"],
+  css: [
+      "~/assets/css/main.css"
+  ],
 
   modules: [
     "@nuxt/image",
@@ -20,18 +22,35 @@ export default defineNuxtConfig({
     "@nuxt/ui"
   ],
 
-  // Allow Nuxt Content client-side SQLite WASM to compile under CSP (dev only).
-  // See: Nuxt Content v3 WASM + CSP issues [[1]] [[2]]
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/'],
+    },
+  },
+
+  routeRules: {
+    '/': { prerender: true },
+    '/blog/**': { prerender: true },
+    '/service/**': { prerender: true },
+    '/legal/**': { prerender: true },
+  },
+
+  // Production CSP mirrors former Netlify headers (contact form → API Gateway).
   security: {
     headers: {
-      // In dev, Nuxt/Vite uses inline scripts for dev tooling/HMR.
-      // Disabling CSP locally avoids breaking the app mount.
       contentSecurityPolicy: process.env.NODE_ENV === 'development'
         ? false
         : {
-            // Keep your existing policy here, but add WASM support for Nuxt Content if you need it.
-            // Minimal example (adjust to your real production CSP requirements):
+            'default-src': ["'self'"],
+            'style-src': ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+            'font-src': ["'self'", 'data:', 'https://fonts.gstatic.com'],
+            'img-src': ["'self'", 'data:', '*'],
             'script-src': ["'self'", "'wasm-unsafe-eval'"],
+            'connect-src': [
+              "'self'",
+              'https://*.execute-api.us-east-1.amazonaws.com',
+            ],
           },
     },
   },
@@ -42,8 +61,9 @@ export default defineNuxtConfig({
     }
   },
 
+  // Static SSG: optimize images at build time via IPX (no Cloudflare Images binding).
   image: {
-    provider: 'cloudflare',
+    provider: 'ipx',
   },
 
   vite: {
