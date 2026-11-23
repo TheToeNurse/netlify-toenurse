@@ -43,7 +43,7 @@ Output: `.output/public`
 | Root directory | `app` |
 | Build command | `pnpm install && pnpm build` (or `npm run build` if using npm) |
 | Build output | `.output/public` (from `wrangler.toml` `pages_build_output_dir`) |
-| `NODE_VERSION` | `22` |
+| `NODE_VERSION` | `26` |
 | `PNPM_VERSION` | `10` (optional) |
 | `API_URL` | API Gateway base URL (build-time; baked into static bundle) |
 
@@ -69,5 +69,5 @@ For Git-connected Projects, connect the repo with **root directory** `app`, **bu
 
 ## Requirements
 
-- Node.js `>=22.22.0`
+- Node.js `>=26.13.1`
 - pnpm 9+

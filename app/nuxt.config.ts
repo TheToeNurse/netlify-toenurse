@@ -34,7 +34,7 @@ export default defineNuxtConfig({
 
   content: {
     experimental: {
-      // Node 22+ built-in SQLite — no native better-sqlite3 compile on CI (e.g. CF Pages).
+      // Node 22+ built-in SQLite (required on Node 26; avoids better-sqlite3 on CI).
       sqliteConnector: 'native',
     },
   },

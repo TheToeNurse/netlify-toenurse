@@ -11,6 +11,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 - Migrate hosting from Netlify to Cloudflare Pages (`pnpm generate` → `.output/public`, `app/wrangler.toml`).
 - Cloudflare Pages static build: `nitro.preset = static`, native SQLite for `@nuxt/content`, `build` → `nuxt generate`.
+- Require Node.js `>=26.13.1` (`.node-version`, `engines`).
 - Tailwind CSS v4 CSS-first setup (`main.css`, remove `tailwind.config.js`).
 - `@nuxt/image` uses IPX for static build-time images; production CSP includes API Gateway `connect-src`.
 - Nitro prerender for blog, service, and legal routes.
