@@ -22,10 +22,20 @@ export default defineNuxtConfig({
     "@nuxt/ui"
   ],
 
+  // Static site only (Cloudflare Pages). Prevents @nuxt/content from treating the
+  // build as a Cloudflare Worker deploy and requiring D1 / better-sqlite3 at runtime.
   nitro: {
+    preset: 'static',
     prerender: {
       crawlLinks: true,
       routes: ['/'],
+    },
+  },
+
+  content: {
+    experimental: {
+      // Node 22+ built-in SQLite — no native better-sqlite3 compile on CI (e.g. CF Pages).
+      sqliteConnector: 'native',
     },
   },
 

@@ -26,13 +26,28 @@ pnpm dev
 
 ## Static production build
 
-Cloudflare Pages uses:
+This project is **static only**. The default `build` script runs `nuxt generate`.
 
 ```bash
+pnpm build
+# or
 pnpm generate
 ```
 
 Output: `.output/public`
+
+### Cloudflare Pages (dashboard)
+
+| Setting | Value |
+|---------|--------|
+| Root directory | `app` |
+| Build command | `pnpm install && pnpm build` (or `npm run build` if using npm) |
+| Build output | `.output/public` (from `wrangler.toml` `pages_build_output_dir`) |
+| `NODE_VERSION` | `22` |
+| `PNPM_VERSION` | `10` (optional) |
+| `API_URL` | API Gateway base URL (build-time; baked into static bundle) |
+
+On Pages CI, `@nuxt/content` auto-detects `CF_PAGES` and would switch to D1 unless `nitro.preset` is `static` (configured in `nuxt.config.ts`). Content indexing uses Node’s built-in SQLite (`content.experimental.sqliteConnector: native`), not `better-sqlite3`.
 
 ## Local preview (Cloudflare Pages)
 

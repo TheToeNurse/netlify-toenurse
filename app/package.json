@@ -8,7 +8,7 @@
     "npm": ">=10.9.4"
   },
   "scripts": {
-    "build": "nuxt build",
+    "build": "nuxt generate",
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "pnpm run generate && wrangler pages dev",
@@ -19,7 +19,6 @@
     "@nuxt/content": "^3.12.0",
     "@nuxt/image": "^2.0.0",
     "@nuxt/ui": "^4.5.0",
-    "better-sqlite3": "^12.6.2",
     "nuxt": "^4.4.2",
     "nuxt-security": "^2.5.1",
     "swiper": "^12.1.2",
